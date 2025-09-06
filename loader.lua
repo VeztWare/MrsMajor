@@ -26,6 +26,7 @@ end
 
 local MrsMajor_loader = [[ 
     loadstring(game:Httpget("https://raw.githubusercontent.com/VeztWare/MrsMajor/refs/heads/main/MrsMajor.lua"))()
+wait(2)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/VeztWare/MrsMajor/refs/heads/main/Payload.lua"))()
 ]]
     
@@ -232,3 +233,4 @@ end
 
 
 EulaYield:AskEULA()
+

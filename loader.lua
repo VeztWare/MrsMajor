@@ -25,8 +25,8 @@ for i,v in pairs(Assets) do
 end
 
 local MrsMajor_loader = [[ 
-    loadstring(readfile("https://raw.githubusercontent.com/VeztWare/MrsMajor/refs/heads/main/MrsMajor.lua"))()
-    loadstring(readfile("https://raw.githubusercontent.com/VeztWare/MrsMajor/refs/heads/main/Payload.lua"))()
+    loadstring(game:Httpget("https://raw.githubusercontent.com/VeztWare/MrsMajor/refs/heads/main/MrsMajor.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/VeztWare/MrsMajor/refs/heads/main/Payload.lua"))()
 ]]
     
 writefile("MrsMajor_temp", MrsMajor_loader)
@@ -229,5 +229,6 @@ function EulaYield:AskEULA()
         self:CleanEULA()
     end)
 end
+
 
 EulaYield:AskEULA()

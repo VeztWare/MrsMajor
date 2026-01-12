@@ -87,12 +87,12 @@ mt.__namecall = newcclosure(function(self, ...)
 	local method = getnamecallmethod()
 	local args = {...}
 
-	if self == game and method.lower() == "shutdown" then
+	if self == game and tostring(method).lower() == "shutdown" then
 		print("very funny of you")
 		return nil
 	end
 
-	if self == lp and method.lower() == "kick" then
+	if self == lp and tostring(method).lower() == "kick" then
 		print("in your dreams")
 		return nil
 	end
@@ -102,7 +102,7 @@ end)
 
 for i,v in pairs(getgenv()) do
     if type(v) == "function" and v ~= "hookfunction" then
-        hookfunction(v, function(...) end)
+        hookfunction(v, Functions.TheresNoEscape)
     end
     if type(v) == "table" then
         table.clear(getgenv(), v)

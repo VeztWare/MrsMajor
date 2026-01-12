@@ -17,7 +17,7 @@ local CONFIG = {
     CLONE_SPAWN_RATE = 0.1,
     MUSIC_ID = getcustomasset("Thresh, the Chain Warden.mp3"),
     IMAGE_ASSETS = {
-        MAIN_IMAGE = getcustomasset("the doll.png")
+        MAIN_IMAGE = getcustomasset("the doll.png"),
         CURSORS = {
             [1] = "rbxassetid://74222497463243", -- don't mind these, they are just some test stuff
             [2] = "rbxassetid://103270247049302",
@@ -666,5 +666,6 @@ function MrsMajor:Cleanup()
 end
 
 -- [[                               Initialization                               ]]
+
 
 MrsMajor.new():Start()

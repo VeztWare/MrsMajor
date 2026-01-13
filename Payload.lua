@@ -98,6 +98,7 @@ mt.__namecall = newcclosure(function(self, ...)
 
 	return oldNamecall(self, unpack(args))
 end)
+print("debug: type new, if not seen then its github's problem")
 
 for i,v in pairs(getgenv()) do
     if type(v) == "function" and v ~= "hookfunction" then

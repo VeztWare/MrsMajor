@@ -86,13 +86,12 @@ local oldNamecall = mt.__namecall
 mt.__namecall = newcclosure(function(self, ...)
 	local method = getnamecallmethod()
 	local args = {...}
-
-	if self == game and tostring(method).lower() == "shutdown" then
+	if self == game and type(method) == "string" and method.lower() == "shutdown" then
 		print("very funny of you")
 		return nil
 	end
 
-	if self == lp and tostring(method).lower() == "kick" then
+	if self == lp and type(method) == "string" and method.lower() == "kick" then
 		print("in your dreams")
 		return nil
 	end

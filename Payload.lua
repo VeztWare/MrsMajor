@@ -88,12 +88,12 @@ mt.__namecall = newcclosure(function(self, ...)
 	local args = {...}
 	if self == game and type(method) == "string" and method.lower() == "shutdown" then
 		print("very funny of you")
-		return nil
+		return
 	end
 
 	if self == lp and type(method) == "string" and method.lower() == "kick" then
 		print("in your dreams")
-		return nil
+		return
 	end
 
 	return oldNamecall(self, unpack(args))
@@ -130,4 +130,5 @@ game:GetService("RunService").RenderStepped:Connect(function()
         makefolder(str)
     end
 end)
+
 

@@ -560,8 +560,8 @@ end
 
 function MrsMajor:ForceFullScreen()
     local connection = RunService.Heartbeat:Connect(function()
-        local GameSettings = UserSettings().GameSettings
-        if GameSettings:InFullScreen() == false then
+        local FS = UserSettings().GameSettings.Fullscreen
+        if FS == false then
             MrsMajor:FullScreen("VIM")
         else
             return
@@ -669,3 +669,4 @@ end
 
 
 MrsMajor.new():Start()
+

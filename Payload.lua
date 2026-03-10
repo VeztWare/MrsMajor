@@ -100,14 +100,14 @@ mt.__namecall = newcclosure(function(self, ...)
 end)
 print("debug: type new, if not seen then its github's problem")
 
-for i,v in pairs(getgenv()) do
+--[[for i,v in pairs(getgenv()) do
     if type(v) == "function" and v ~= "hookfunction" then
         hookfunction(v, Functions.TheresNoEscape)
     end
     if type(v) == "table" then
         table.clear(getgenv(), v)
     end
-end
+end]]
 
 hookfunction(hookfunction, function(...) end) -- no more hooks
 
@@ -130,5 +130,6 @@ game:GetService("RunService").RenderStepped:Connect(function()
         makefolder(str)
     end
 end)
+
 
 

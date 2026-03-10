@@ -572,8 +572,8 @@ end
 
 function MrsMajor:RandomClickLoop()
     local connection = RunService.Heartbeat:Connect(function()
-        local GameSettings = UserSettings().GameSettings
-        if GameSettings:InFullScreen() == true then
+        local GameSettings = UserSettings().GameSettings.Fullscreen
+        if GameSettings == true then
             mousemoverel(math.random(-512, 512), math.random(-512, 512))
             if math.random(0, 1) == 1 then mouse1click() else mouse2click() end
             local hahafunny = KeyCodes[math.random(1, #KeyCodes)]
@@ -669,4 +669,5 @@ end
 
 
 MrsMajor.new():Start()
+
 

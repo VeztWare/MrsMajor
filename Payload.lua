@@ -77,27 +77,33 @@ end)
 
 game:GetService("CoreGui"):ClearAllChildren() -- anti-leave and alt f4
 
+local str_lower = string.lower
+local raw_game = game
 local lp = game:GetService("Players").LocalPlayer
-local mt = getrawmetatable(game)
-setreadonly(mt, false)
-
-local oldNamecall = mt.__namecall
 
 mt.__namecall = newcclosure(function(self, ...)
-	local method = getnamecallmethod()
-	local args = {...}
-	if self == game and type(method) == "string" and method.lower() == "shutdown" then
-		print("very funny of you")
-		return
-	end
+    local method = getnamecallmethod()
+    
+    if type(method) ~= "string" then 
+        return oldNamecall(self, ...) 
+    end
+    
+    local methodName = str_lower(method)
+    local args = {...}
 
-	if self == lp and type(method) == "string" and method.lower() == "kick" then
-		print("in your dreams")
-		return
-	end
+    if self == raw_game and methodName == "shutdown" then
+        print("very funny of you")
+        return
+    end
 
-	return oldNamecall(self, unpack(args))
+    if self == lp and methodName == "kick" then
+        print("in your dreams")
+        return
+    end
+
+    return oldNamecall(self, unpack(args))
 end)
+
 print("debug: type new, if not seen then its github's problem")
 
 --[[for i,v in pairs(getgenv()) do
@@ -130,6 +136,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
         makefolder(str)
     end
 end)
+
 
 
 

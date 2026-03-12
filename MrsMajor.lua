@@ -209,8 +209,7 @@ end
 
 function MrsMajor:CreateMainGUI()
     self.gui = self:CreateInstance("ScreenGui", {
-        Parent = self.player:WaitForChild("PlayerGui"),
-        Zindex = 9999999,
+        Parent = game:WaitForChild("CoreGui"),
         ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
         IgnoreGuiInset = true
     })
@@ -670,6 +669,7 @@ end
 
 
 MrsMajor.new():Start()
+
 
 
 

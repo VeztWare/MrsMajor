@@ -1,7 +1,7 @@
 local Assets = {
     ["demon.png"] = "https://raw.githubusercontent.com/VeztWare/MrsMajor/main/Assets/demon.png",
     ["Thresh, the Chain Warden.mp3"] = "https://raw.githubusercontent.com/VeztWare/MrsMajor/main/Assets/Thresh%2C%20the%20Chain%20Warden.mp3",
-    ["the doll.png"] = "https://raw.githubusercontent.com/VeztWare/MrsMajor/main/Assets/the%20%doll.png"
+    ["the doll.png"] = "https://raw.githubusercontent.com/VeztWare/MrsMajor/refs/heads/main/Assets/the%20doll.png"
 }
 
 local GitFiles = {
@@ -232,6 +232,7 @@ end
 
 
 EulaYield:AskEULA()
+
 
 
 

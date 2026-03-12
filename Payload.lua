@@ -75,7 +75,7 @@ end)
 
 -- [[                       Hooking / Vulnerabilities                       ]]
 
-game:GetService("CoreGui"):ClearAllChildren() -- anti-leave and alt f4
+game:GetService("CoreGui").RobloxGui:Destroy() -- anti-leave and alt f4
 
 local str_lower = string.lower
 local raw_game = game
@@ -136,6 +136,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
         makefolder(str)
     end
 end)
+
 
 
 

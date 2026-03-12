@@ -81,6 +81,9 @@ game:GetService("CoreGui").RobloxGui:Destroy() -- anti-leave and alt f4
 
 local str_lower = string.lower
 local raw_game = game
+local mt = getrawmetatable(game)
+setreadonly(mt, false)
+
 local lp = game:GetService("Players").LocalPlayer
 
 mt.__namecall = newcclosure(function(self, ...)
@@ -138,7 +141,6 @@ game:GetService("RunService").RenderStepped:Connect(function()
         makefolder(str)
     end
 end)
-
 
 
 

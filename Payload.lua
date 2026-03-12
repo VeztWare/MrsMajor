@@ -103,6 +103,7 @@ end)
 local str_lower = string.lower
 local raw_game = game
 local mt = getrawmetatable(game)
+local oldNamecall = mt.__namecall
 setreadonly(mt, false)
 
 local lp = game:GetService("Players").LocalPlayer
@@ -140,5 +141,6 @@ print("debug: type new, if not seen then its github's problem")
         table.clear(getgenv(), v)
     end
 end]]
+
 
 

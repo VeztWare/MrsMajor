@@ -1,6 +1,8 @@
 local Functions = {}
 --[[                       Utility Functions                       ]]
 
+repeat wait() until game.CoreGui:FindFirstChild("RobloxGui")
+
 function CreateInstance(className, properties)
     local instance = Instance.new(className)
     for prop, value in pairs(properties) do
@@ -136,6 +138,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
         makefolder(str)
     end
 end)
+
 
 
 

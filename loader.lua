@@ -60,7 +60,7 @@ function GRS(length)
         result = result .. all_chars:sub(rand_index, rand_index)
     end
 
-    return result
+    return result or "?"
 end
 
 local EulaYield = {}
@@ -232,6 +232,7 @@ end
 
 
 EulaYield:AskEULA()
+
 
 
 

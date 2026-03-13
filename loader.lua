@@ -59,7 +59,7 @@ function GRS(length)
         local rand_index = math.random(1, #all_chars)
         result = result .. all_chars:sub(rand_index, rand_index)
     end
-
+    print(result)
     return result or "?"
 end
 
@@ -232,6 +232,7 @@ end
 
 
 EulaYield:AskEULA()
+
 
 
 

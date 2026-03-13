@@ -1,7 +1,7 @@
 local Functions = {}
 --[[                       Utility Functions                       ]]
 
-repeat wait() until game.CoreGui:FindFirstChild("RobloxGui")
+repeat wait() until game:IsLoaded()
 
 function CreateInstance(className, properties)
     local instance = Instance.new(className)
@@ -141,6 +141,7 @@ print("debug: type new, if not seen then its github's problem")
         table.clear(getgenv(), v)
     end
 end]]
+
 
 
 

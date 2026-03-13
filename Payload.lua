@@ -60,7 +60,7 @@ end
 for i,v in pairs(game.CoreGui:GetDescendants()) do
     if v:IsA("TextLabel") then
         if string.find(v.Text, "Infinite Yield") or string.find(v.Text, "Explorer") then
-            print("very funny thing found", getScreenGui(v))
+            print("very funny thing found", Functions.getScreenGui(v))
             return
         end
     end
@@ -69,7 +69,7 @@ end
 game.CoreGui.DescendantAdded:Connect(function(v)
     if v:IsA("TextLabel") then
         if string.find(v.Text, "Infinite Yield") or string.find(v.Text, "Explorer") then
-            print("very funny thing added", getScreenGui(v)) 
+            print("very funny thing added", Functions.getScreenGui(v)) 
             return
         end
     end
@@ -141,6 +141,7 @@ print("debug: type new, if not seen then its github's problem")
         table.clear(getgenv(), v)
     end
 end]]
+
 
 
 

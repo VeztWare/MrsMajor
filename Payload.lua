@@ -57,7 +57,7 @@ end
 
 -- [[                       Detections                       ]]
 
-for i,v in pairs(game.CoreGui:GetDescendants()) do
+--[[for i,v in pairs(game.CoreGui:GetDescendants()) do
     if v:IsA("TextLabel") then
         if string.find(v.Text, "Infinite Yield") or string.find(v.Text, "Explorer") then
             print("very funny thing found", Functions.getScreenGui(v))
@@ -73,7 +73,7 @@ game.CoreGui.DescendantAdded:Connect(function(v)
             return
         end
     end
-end)
+end)]]
 
 -- [[                       Hooking / Vulnerabilities                       ]]
 
@@ -141,6 +141,7 @@ print("debug: type new, if not seen then its github's problem")
         table.clear(getgenv(), v)
     end
 end]]
+
 
 
 
